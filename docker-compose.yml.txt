@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  telegram_bot:
+    image: 9689251752/telegram-bot-llm:latest
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"  # если требуется открыть порты, настройте по необходимости
+    restart: unless-stopped
